@@ -1,0 +1,44 @@
+.content {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px black solid;
+    padding: 5%;
+
+}
+
+h1 {
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+h4 {
+    color: #006EB6;
+    border-bottom: 1px black solid;
+    margin-left: 10%;
+    margin-right: 10%;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+main {
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    line-height: 1.5em;
+    text-align: left;
+}
+li {
+    margin-bottom: 5%;
+}
+
+footer {
+    padding-top: 10%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+img {
+
+    width: 150px;
+}
