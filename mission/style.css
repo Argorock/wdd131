@@ -39,11 +39,17 @@ footer {
 }
 
 img {
-
     width: 150px;
 }
 
 .dark {
-    background-color: black;
+    background-color: #333;
     color: white;
 }
+.dark h4 {
+    color: #A0D4ED;
+    border-bottom: white 1px solid;
+}
+/* .dark div {
+    border: solid 1px white
+} */
