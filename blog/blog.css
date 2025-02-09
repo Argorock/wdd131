@@ -1,0 +1,83 @@
+h1 {
+    font-size: 40px;
+    
+    justify-self: center;
+}
+
+nav {
+    border: black 1px solid;
+    margin-right: 10%;
+    margin-left: -20px;
+    align-content: center;
+    background-color: goldenrod;
+}
+nav ul {
+
+        list-style-type: none;
+        float: right;
+}
+    li {
+        padding-right: 3em;
+        padding-top: .5em;
+        padding-bottom: .5em;
+        float: right;
+}
+
+main {
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+}
+
+.sort {
+    margin: 10%;
+    border: 2px solid black;
+    border-radius: 5px 5px;
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    font-size: 24px;
+    font-weight: bold;
+    min-height: 500px;
+}
+.sort p {
+    margin: 5%;
+}
+
+.dropdown {
+    margin: 5%;
+    width: 200px;
+    max-height: 50px;
+    border: 2px solid black;
+    border-radius: 5px 5px;
+}
+
+.book {
+    margin: 10%;
+
+}
+
+.book img {
+    width: 100%;
+}
+
+.book p {
+    padding-bottom: 20%;
+}
+
+.rating {
+    margin: 10%;
+    border-left: 2px solid black;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.age {
+    font-size: 18px;
+}
+.genre {
+    font-size: 18px;
+}
+.stars {
+    margin-bottom: 160%;
+}
