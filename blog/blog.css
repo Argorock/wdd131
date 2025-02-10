@@ -63,9 +63,11 @@ main {
     padding-bottom: 20%;
 }
 
-.rating {
+.rating  div {
     margin: 10%;
     border-left: 2px solid black;
+    min-height: 800px;
+    margin-bottom: 13%;
 }
 
 .title {
@@ -77,7 +79,4 @@ main {
 }
 .genre {
     font-size: 18px;
-}
-.stars {
-    margin-bottom: 160%;
 }
