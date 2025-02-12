@@ -50,9 +50,10 @@ main {
     border-radius: 5px 5px;
 }
 
+
+
 .book {
     margin: 10%;
-
 }
 
 .book img {
@@ -63,14 +64,14 @@ main {
     padding-bottom: 20%;
 }
 
-.rating  div {
+/* .rating  div {
     margin: 10%;
     border-left: 2px solid black;
     min-height: 800px;
     margin-bottom: 13%;
-}
+} */
 
-.title {
+/* .title {
     font-size: 24px;
 }
 
@@ -79,4 +80,4 @@ main {
 }
 .genre {
     font-size: 18px;
-}
+} */
