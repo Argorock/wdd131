@@ -1,0 +1,29 @@
+form {
+    display: grid;
+    grid-template-columns: 100px 300px 100px;
+}
+#card-front {
+    background-color: lightgray;
+    width: 400px;
+    height: 300px;
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+#card-back {
+    background-color: lightblue;
+    width: 400px;
+    height: 300px;
+    grid-column: 2/4;
+    grid-row: 2/4;
+}
+
+button {
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+#cardNumberContainer {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
