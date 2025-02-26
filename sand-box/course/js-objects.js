@@ -1,5 +1,6 @@
 // courses.js
-const aCourse = {
+
+export const aCourse = {
   code: "WDD131",
   name: "Javascript Language",
   sections: [
@@ -18,13 +19,8 @@ const aCourse = {
       instructor: "Sis A",
     },
   ],
-  //         showSection: function(section)
-  //         {
-  //             console.log(`showSection method ran`);
-  //         }
 
   enrollStudent: function (sectionNum) {
-    // find the right section...Array.findIndex will work here
     const sectionIndex = this.sections.findIndex(
       (section) => section.sectionNum == sectionNum
     );
@@ -56,7 +52,7 @@ function renderSections(sections) {
   document.querySelector("#sections").innerHTML = html.join("");
 }
 
-//   aCourse.showSection();
+
 setCourseInfo(aCourse);
 renderSections(aCourse.sections);
 
