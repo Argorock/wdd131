@@ -77,7 +77,7 @@ hr {
         justify-content: space-evenly;
     }
     .recipe img {
-        width: 70%;
+        width: 60%;
         object-fit: cover;
         border-radius: 5px;
     }

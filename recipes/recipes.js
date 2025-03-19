@@ -1,45 +1,45 @@
 const recipes = [
     {
-        image: "images/apple-crisp.jpg",
-        tags: ["Dessert", "Fruit"],
-        name: "Apple Crisp",
-        rating: 4,
-        description: "This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream."
+    image: "images/apple-crisp.jpg",
+    tags: ["Dessert", "Fruit"],
+    name: "Apple Crisp",
+    rating: 4,
+    description: "This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream."
     },
     {
-        image: "images/black-beans-and-rice.jpg",
-        tags: ["Beans", "Vegetarian"],
-        name: "Black Beans and Rice",
-        rating: 5,
-        description: "This black beans and rice recipe is a delicious and easy weeknight meal that's perfect for feeding a crowd."
+    image: "images/black-beans-and-rice.jpg",
+    tags: ["Beans", "Vegetarian"],
+    name: "Black Beans and Rice",
+    rating: 5,
+    description: "This black beans and rice recipe is a delicious and easy weeknight meal that's perfect for feeding a crowd."
     },
     {
-        image: "images/chicken-curry.webp",
-        tags: ["Chicken", "Curry"],
-        name: "Chicken Curry",
-        rating: 5,
-        description: "This chicken curry recipe is a delicious and easy-to-make Indian dish that's perfect for a cozy night in."
+    image: "images/chicken-curry.webp",
+    tags: ["Chicken", "Curry"],
+    name: "Chicken Curry",
+    rating: 5,
+    description: "This chicken curry recipe is a delicious and easy-to-make Indian dish that's perfect for a cozy night in."
     },
     {
-        image: "images/chocolate-chip-cookies.jpg",
-        tags: ["Cookies", "Chocolate"],
-        name: "Chocolate Chip Cookies",
-        rating: 5,
-        description: "These chocolate chip cookies are a classic treat that everyone loves. They're easy to make and perfect for sharing with friends and family."
+    image: "images/chocolate-chip-cookies.jpg",
+    tags: ["Cookies", "Chocolate"],
+    name: "Chocolate Chip Cookies",
+    rating: 5,
+    description: "These chocolate chip cookies are a classic treat that everyone loves. They're easy to make and perfect for sharing with friends and family."
     },
     {
-        image: "images/escalopes-de-poulet-a-la-creme.webp",
-        tags: ["Chicken", "Curry"],
-        name: "Escalopes de poulet a la creme",
-        rating: 5,
-        description: "This chicken curry recipe is a delicious and easy-to-make Indian dish that's perfect for a cozy night in."
+    image: "images/escalopes-de-poulet-a-la-creme.webp",
+    tags: ["Chicken", "Curry"],
+    name: "Escalopes de poulet a la creme",
+    rating: 5,
+    description: "This chicken curry recipe is a delicious and easy-to-make Indian dish that's perfect for a cozy night in."
     },
     {
-        image: "images/german-gooseberry-cake.jpg",
-        tags: ["Cake", "Fruit"],
-        name: "German Gooseberry Cake",
-        rating: 5,
-        description: "This German gooseberry cake is a delicious and easy-to-make dessert that's perfect for any occasion."
+    image: "images/german-gooseberry-cake.jpg",
+    tags: ["Cake", "Fruit"],
+    name: "German Gooseberry Cake",
+    rating: 5,
+    description: "This German gooseberry cake is a delicious and easy-to-make dessert that's perfect for any occasion."
     }
 ];
 
@@ -69,7 +69,6 @@ function recipeTemplate(recipe) {
         </figcaption>
     </figure>`;
 }
-
 
 // function recipeTemplate(recipe) {
 // 	return `<figure class="recipe">
@@ -117,10 +116,6 @@ function ratingTemplate(rating) {
     html += `</span>`;
     return html;
 }
-
-
-const recipe = getRandomListEntry(recipes);
-console.log(recipeTemplate(recipe));
 
 function renderRecipes(recipeList) {
     const recipesContainer = document.querySelector(".recipes-container");
