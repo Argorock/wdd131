@@ -88,7 +88,7 @@ main {
 }
 
 .character-sheet {
-    height: 5000px;
+    height: 100%;
     width: 828px;
     background: linear-gradient(to bottom, #e0c3a3, #c8a97e, #b08b5e); /* Parchment gradient */
     border: 2px solid #8b6f47;
@@ -97,6 +97,9 @@ main {
     font-family: 'Georgia', serif;
     position: relative;
     overflow: hidden;
+    margin-bottom: 50px;
+    text-align: center;
+    color: black;
 }
 
 .character-sheet::before {
@@ -155,6 +158,150 @@ a img {
 }
 
 
+/* Dice roller site */
+
+
+
+.dice-roller-title {
+    text-align: center;
+}
+
+.dice-images{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: transparent; 
+}
+
+.dice-images img {
+    width: 200px;
+    background-color: white;
+    filter: none;
+    opacity: 1;
+    background-color: transparent;
+}
+.dice-images button {
+    background: transparent;
+    border: none; 
+    outline: none; 
+    color: none; 
+    font: none; 
+    cursor: pointer; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.dice-images button:hover {
+    /* filter: invert(.5); */
+}
+
+.character-sheet-2 {
+    height: 100%;
+    width: 828px;
+    background: linear-gradient(to bottom, #e0c3a3, #c8a97e, #b08b5e);
+    border: 2px solid #8b6f47;
+    box-sizing: border-box;
+    padding: 20px;
+    font-family: 'Georgia', serif;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+    text-align: center;
+    color: black;
+}
+
+.character-sheet-2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, transparent, rgba(0, 0, 0, 0.3)),
+                radial-gradient(circle at top right, transparent, rgba(0, 0, 0, 0.3)),
+                radial-gradient(circle at bottom left, transparent, rgba(0, 0, 0, 0.3)),
+                radial-gradient(circle at bottom right, transparent, rgba(0, 0, 0, 0.3));
+    pointer-events: none;
+    z-index: 1;
+}
+
+.character-sheet-2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 20px 10px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 2;
+}
+
+
+/* dice-popover css */
+
+#dice-popover {
+    width: 80%;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: black;
+}
+
+.popver-content {
+    width: 80%;
+    height: 80%;
+    background: linear-gradient(to bottom, #e0c3a3, #c8a97e, #b08b5e);
+    border: 2px solid #8b6f47;
+    box-sizing: border-box;
+    padding: 20px;
+    font-family: 'Georgia', serif;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: black;
+}
+
+.popover-content div {
+    width: 80%;
+    height: 80%;
+    background: linear-gradient(to bottom, #e0c3a3, #c8a97e, #b08b5e);
+    border: 2px solid #8b6f47;
+    box-sizing: border-box;
+    padding: 20px;
+    font-family: 'Georgia', serif;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: black;
+}
+.popover-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, transparent, rgba(0, 0, 0, 0.3)),
+                radial-gradient(circle at top right, transparent, rgba(0, 0, 0, 0.3)),
+                radial-gradient(circle at bottom left, transparent, rgba(0, 0, 0, 0.3)),
+                radial-gradient(circle at bottom right, transparent, rgba(0, 0, 0, 0.3));
+    pointer-events: none;
+    z-index: 1;
+}
+.popover-content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 20px 10px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 2;
+}
 
 
 

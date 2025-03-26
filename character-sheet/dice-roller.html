@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="character-sheet.css">
     <link rel="icon" href="images/dice-favicon.png">
     <link rel="icon" href="images/dice-favicon.png" sizes="64x64">
+    <script src="character-sheet.js" defer></script>
 
 </head>
 <body>
@@ -22,7 +23,45 @@
     </header>
 
     <main>
-
+        <section class="character-sheet-2">
+            <h1>Choose your Weapon</h1>
+            <section class="dice-images">
+                <button class="dice-button" data-content="D2" popovertarget="dice-popover">
+                    <img src="images/dice-1/icons/coin.png" alt="Coin">
+                </button>
+                <button class="dice-button" data-content="D4">
+                    <img src="images/dice-1/icons/d4.png" alt="D4">
+                </button>
+                <button class="dice-button" data-content="D6">
+                    <img src="images/dice-1/icons/perspective-dice-six.png" alt="D6">
+                </button>
+                <button class="dice-button" data-content="D8">
+                    <img src="images/dice-1/icons/dice-eight-faces-eight.png" alt="D8">
+                </button>
+                <button class="dice-button" data-content="D10">
+                    <img src="images/dice-1/icons/d10.png" alt="D10">
+                </button>
+                <button class="dice-button" data-content="D12">
+                    <img src="images/dice-1/icons/d12.png" alt="D12">
+                </button>
+                <button class="dice-button" data-content="D20">
+                    <img src="images/dice-1/icons/dice-twenty-faces-twenty.png" alt="D20">
+                </button>
+                <button class="dice-button" data-content="D100">
+                    <img src="images/dice-1/icons/d10.png" alt="D10">
+                </button>
+                <button class="dice-button" data-content="Custom">
+                    <img src="images/dice-1/icons/rule-book.png" alt="Rule Book">
+                </button>
+            </section>
+            <dialog id="dice-popover" popover="manual">
+                <div class="popover-content">
+                    <button popovertarget="dice-popover">Close</button>
+                    <div>hello</div>
+                </div>
+            </dialog>
+        </div>
+    </section>
     </main>
 
 </body>
