@@ -13,6 +13,9 @@ header {
     background: linear-gradient(to right,  #5c4033, #b08d57, #5c4033);
 
 }
+footer {
+    background: linear-gradient(to right,  #5c4033, #b08d57, #5c4033);
+}
 
 nav {
     width: 100%;
@@ -90,7 +93,7 @@ main {
 .character-sheet {
     height: 100%;
     width: 828px;
-    background: linear-gradient(to bottom, #e0c3a3, #c8a97e, #b08b5e); /* Parchment gradient */
+    background: linear-gradient(to bottom, #e0c3a3, #c8a97e, #b08b5e);
     border: 2px solid #8b6f47;
     box-sizing: border-box;
     padding: 20px;
@@ -194,9 +197,7 @@ a img {
     margin: 0; 
 }
 
-.dice-images button:hover {
-    /* filter: invert(.5); */
-}
+
 
 .character-sheet-2 {
     height: 100%;
@@ -316,15 +317,45 @@ a img {
     width: 400px;
 }
 
+/* custom dice roller */
+.popover-content label {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333; 
+    display: block; 
+}
+.popover-content input[type="number"] {
+    width: 25%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+.popover-content .roll-result {
+    font-size: 35px;
+    font-weight: bold;
+    /* color: #333;
+    margin-top: 15px;
+    text-align: center;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px; */
+    /* box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+
 
 @media (max-width: 768px) {
     nav {
-        flex-direction: column; /* Stack the links */
+        flex-direction: column; 
         align-items: center;
     }
     nav a {
-        font-size: 1em; /* Slightly smaller text */
-        margin: 5px 0; /* Space between links */
+        font-size: 1em; 
+        margin: 5px 0; 
         
     }
 }
