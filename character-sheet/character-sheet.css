@@ -252,7 +252,7 @@ a img {
 
 .popover-content div {
     width: 80%;
-    height: 800px;
+    height: 100%;
     margin-top: 5%;
     margin-left: 10%;
     background: linear-gradient(to bottom, #e0c3a3, #c8a97e, #b08b5e);
@@ -291,17 +291,6 @@ a img {
     z-index: 2;
 }
 
-/* .popover-content button {
-    margin-top: 10px;
-    background: radial-gradient(circle, #163104, #272727);
-    background-color: #163104;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 4px;
-} */
-
 .popover-content button {
     margin-top: 10px;
     background: linear-gradient(to bottom, #317504, #272727);
@@ -321,6 +310,10 @@ a img {
     transform: scale(1.05); 
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); 
     background: linear-gradient(to bottom, #272727, #317504); 
+}
+
+#dice-popover-img{
+    width: 400px;
 }
 
 
