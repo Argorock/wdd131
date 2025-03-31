@@ -11,10 +11,26 @@ header {
     align-items: center;
     height: 100px;
     background: linear-gradient(to right,  #5c4033, #b08d57, #5c4033);
+    border-bottom: 10px solid linear-gradient(to right,   #d5a152, #130e0b, #d5a152);
+
 
 }
 footer {
+    border-top: 2px solid #8b6f47;
+    border-top: 10px solid linear-gradient(to right,   #d5a152, #130e0b, #d5a152);
+    margin-top: -15px;
     background: linear-gradient(to right,  #5c4033, #b08d57, #5c4033);
+}
+
+#copyright {
+    margin-left: 2%;
+    color: white;
+    font-size: 1.2em;
+}
+
+.social-media  img{
+    margin-left: 1%;
+    width: 20px;
 }
 
 nav {
