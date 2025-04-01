@@ -330,7 +330,7 @@ a img {
 }
 
 #dice-popover-img{
-    width: 400px;
+    width: 300px;
 }
 
 /* custom dice roller */
@@ -341,26 +341,24 @@ a img {
     color: #333; 
     display: block; 
 }
-.popover-content input[type="number"] {
-    width: 25%;
+
+.popover-content input {
+
+    width: 20%;
     padding: 8px;
-    margin: 5px 0 15px 0;
+    margin: 0 auto;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 20px;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 .popover-content .roll-result {
-    font-size: 35px;
+    font-size: 72px;
     font-weight: bold;
-    /* color: #333;
-    margin-top: 15px;
-    text-align: center;
-    background: #f9f9f9;
-    padding: 10px;
-    border-radius: 5px; */
-    /* box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); */
+    font-family: "Modesto Condensed" ;
+    text-shadow: black 2px 2px 30px;
 }
+
 
 
 

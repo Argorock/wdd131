@@ -28,6 +28,7 @@ const closePopoverButton = document.getElementById('close-popover');
 
 let rollingInterval;
 let currentDicetype = null;
+let currentRotation = 0;
 
 document.querySelectorAll('.dice-button').forEach(button => {
     button.addEventListener('click', () => {
@@ -71,10 +72,10 @@ function rollDice() {
         clearInterval(rollingInterval);
     }
 
-    const diceImage = document.querySelector('#dice-popover-img'); // Reference the dice image
+    const diceImage = document.querySelector('#dice-popover-img');
 
     if (currentDicetype === 'Custom') {
-        // Handle custom dice roll
+
         const minInput = document.getElementById('custom-min');
         const maxInput = document.getElementById('custom-max');
 
@@ -91,7 +92,7 @@ function rollDice() {
             return;
         }
 
-        // Start the rolling animation
+        // Starts the rolling animation
         const diceImages = [
             'images/dice-1/icons/roll-dice-1.png',
             'images/dice-1/icons/roll-dice-2.png',
@@ -103,18 +104,24 @@ function rollDice() {
 
         rollingInterval = setInterval(() => {
             const randomIndex = Math.floor(Math.random() * diceImages.length);
-            diceImage.src = diceImages[randomIndex]; // Update the dice image with a random one
+            const randomRotation = Math.floor(Math.random() * 360);
+            diceImage.src = diceImages[randomIndex];
+            currentRotation = randomRotation;
+            diceImage.style.transform = `rotate(${currentRotation}deg)`;
+            diceImage.style.transform = `rotate(${randomRotation}deg)`;
         }, 60);
 
-        // Stop the rolling animation after 2 seconds and display the result
+        // Stops the rolling animation
         setTimeout(() => {
-            clearInterval(rollingInterval); // Stop the animation
-            const rollValue = Math.floor(Math.random() * (max - min + 1)) + min; // Generate random roll
+            clearInterval(rollingInterval); 
+            currentRotation = 0;
+            diceImage.style.transform = `rotate(${currentRotation}deg)`;
+            const rollValue = Math.floor(crypto.getRandomValues(new Uint32Array(1))[0] / (0xFFFFFFFF + 1) * (max - min + 1)) + min;
             const rollResult = document.querySelector('.roll-result');
             rollResult.textContent = `${rollValue}`;
-        }, 2000); // Run for 2 seconds
+        }, 3000); 
     } else {
-        // Handle standard dice roll
+        
         const maxRoll = parseInt(currentDicetype.replace('D', ''));
         const diceImages = [
             'images/dice-1/icons/roll-dice-1.png',
@@ -127,15 +134,21 @@ function rollDice() {
 
         rollingInterval = setInterval(() => {
             const randomIndex = Math.floor(Math.random() * diceImages.length);
+            const randomRotation = Math.floor(Math.random() * 360);
             diceImage.src = diceImages[randomIndex];
+            currentRotation = randomRotation;
+            diceImage.style.transform = `rotate(${currentRotation}deg)`;
         }, 60);
 
         setTimeout(() => {
             clearInterval(rollingInterval);
-            const rollValue = Math.floor(Math.random() * maxRoll) + 1;
+            currentRotation = 0;
+            diceImage.style.transform = `rotate(${currentRotation}deg)`;
+            const rollValue = Math.floor((crypto.getRandomValues(new Uint32Array(1))[0] / (0xFFFFFFFF + 1)) * maxRoll) + 1;
+            // const rollValue = Math.floor(Math.random() * maxRoll) + 1;
             const rollResult = document.querySelector('.roll-result');
             rollResult.textContent = `${rollValue}`;
-        }, 2000);
+        }, 3000);
     }
 }
 
