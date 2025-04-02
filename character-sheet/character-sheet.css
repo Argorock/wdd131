@@ -95,6 +95,15 @@ nav a:focus::after {
     transform: scaleX(1);
 }
 
+a img {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    width: 100px;
+}
+
+/* Main page CSS */
+
 main {
     display: flex;
     flex-direction: column;
@@ -108,7 +117,7 @@ main {
 
 .character-sheet {
     height: 100%;
-    width: 828px;
+    width: 60%;
     background: linear-gradient(to bottom, #e0c3a3, #c8a97e, #b08b5e);
     border: 2px solid #8b6f47;
     box-sizing: border-box;
@@ -119,6 +128,7 @@ main {
     margin-bottom: 50px;
     text-align: center;
     color: black;
+    display: flex;
 }
 
 .character-sheet::before {
@@ -145,17 +155,11 @@ main {
     height: 100%;
     box-shadow: inset 0 0 20px 10px rgba(0, 0, 0, 0.5);
     pointer-events: none;
-    z-index: 2;
-}
-a img {
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 5px;
-    width: 100px;
+
 }
 
 .character-sheet img {
-    width: 300px
+    width: 300px;
 }
 
 #character-name {
@@ -166,15 +170,54 @@ a img {
     color: #333;
 }
 #character-name input {
-    width: 250px;
+    border: black;
+    position: relative;
+    transform: translate(35px, -75px);
+    width: 225px;
     height: 25px;
     font-size: 1em;
     background-color: black;
-    color: white;
-    border: none;
-    display: flex;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
     text-align: center;
 }
+
+/* Cahracter info */
+.character-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center; 
+    margin-top: 20px;
+    width: 70%;
+}
+
+.info-box {
+    width: 200px;
+    flex: wrap;
+    margin: 0 30px;
+    background: radial-gradient(circle, #317504, #272727);
+    border: 3px solid #8b6f47;
+    border-radius: 8px;
+}
+.info-box label {
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+}
+
+.info-box input {
+    width: 90%;
+    padding: 8px;
+    font-size: 1em;
+    border: 2px solid #8b6f47;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: radial-gradient(circle, #317504, #272727);
+    color: white;
+    text-align: center;
+}
+
 
 
 /* Dice roller site */
