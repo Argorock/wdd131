@@ -169,3 +169,14 @@ document.addEventListener('click', (event) => {
 
 
 // main functionality
+
+const statInputs = document.querySelectorAll('.stat-input');
+const modifierInputs = document.querySelectorAll('.modifier-input');
+
+statInputs.forEach((statInput, index) => {
+    statInput.addEventListener('input', () => {
+        const statValue = parseInt(statInput.value) || 0;
+        const modifierValue = Math.floor((statValue - 10) / 2);
+        modifierInputs[index].value = modifierValue;
+    });
+});
