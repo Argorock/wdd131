@@ -87,9 +87,65 @@
                     <input type="number" id="charisma-modifier"  class="modifier-input">
                 </div>
             </div>
+            <div class="additional-stats">
+                <div class="attribute">
+                    <label for="armor-class">Armor Class</label>
+                    <input type="number" id="armor-class" >
+                </div>
+                <div class="attribute">
+                    <label for="initiative">Initiative</label>
+                    <input type="number" id="initiative" >
+                </div>
+                <div class="attribute">
+                    <label for="speed">Speed</label>
+                    <input type="number" id="speed" >
+                </div>
+                <div class="hit-points">
+                    <label>Hit Points</label>
+                    <div>
+                        <input type="number" id="max-hp" placeholder="Max" class="max-hp">
+                        <input type="number" id="current-hp" placeholder="Current">
+                        <input type="number" id="temp-hp" placeholder="Temp">
+                    </div>
+                </div>
+                <div class="attribute">
+                    <label for="hit-dice">Hit Dice</label>
+                    <input type="text" id="hit-dice" >
+                </div>
+                <div class="death-saves">
+                    <label>Death Saves</label>
+                    <div>
+                        <span>Successes:</span>
+                        <input type="checkbox" id="death-save-success-1">
+                        <input type="checkbox" id="death-save-success-2">
+                        <input type="checkbox" id="death-save-success-3">
+                    </div>
+                    <div>
+                        <span>Failures:</span>
+                        <input type="checkbox" id="death-save-failure-1">
+                        <input type="checkbox" id="death-save-failure-2">
+                        <input type="checkbox" id="death-save-failure-3">
+                    </div>
+                </div>
+            </div>
         </section>
         <img src="dnd-character-sheet-unfilled.webp" alt="">
     </main>
+    <footer>
+        <div class="footer-content">
+            <p id="copyright">&copy; 2025 RPG Toolkit. All rights reserved.</p>
+            <nav>
+                <a href="wire-frame-character-sheet.png">WireFrame</a>
+                <a href="index.html">Character Sheet</a>
+                <a href="dice-roller.html">Dice Roller</a>
+            </nav>
+            <div class="social-media">
+                <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
