@@ -270,6 +270,7 @@ function calculateProficiencyBonus() {
     document.getElementById('proficiency-bonus').value = proficiencyBonus;
     updateSavingThrows();
     updateSkills();
+    updatePassivePerception();
 };
 
 document.getElementById('class-level').addEventListener('input', calculateProficiencyBonus);
