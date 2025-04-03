@@ -767,6 +767,9 @@ main {
 
 
 
+/* media query should start at at least 650px */
+
+
 
 @media (max-width: 768px) {
     nav {
