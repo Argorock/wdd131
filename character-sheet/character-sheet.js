@@ -351,4 +351,9 @@ document.getElementById('proficiency-bonus').addEventListener('input', updatePas
 updatePassivePerception();
 
 
-
+// so the way i use AI in any project is i first take a crack at it myself, and then ill take what i have,
+// if its not working, and ill ask AI what's wrong here, how can i make this work
+// so if you have any questions about anything, let me know, and i can explain things, and how i got to
+// that point. because certain things definetley required the help of an AI for me,
+// like doing a task for a certain amount of time, replacing numbers in a string input box, and a few other things
+// hope you enjoyed this website and the fun things it includes
