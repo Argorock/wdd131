@@ -771,14 +771,131 @@ main {
 
 
 
+
+/* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto; 
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .character-sheet {
+        width: 100%; 
+        padding: 10px;
+    }
+
+    .character-info, .stats, .additional-stats, .passive-inspiration-proficiency, .skills-container, .saving-throws-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; 
+    }
+
+    .info-box, .stats div, .additional-stats .attribute, .skills-container, .saving-throws-container {
+        width: 100%; 
+        max-width: 300px;
+    }
+
+    #max-hp {
+        width: 100%;
+        max-width: 300px;
+        height: 15%;
+    }
+
+    .info-box input{
+        font-size: 1.5em; 
+        width: 90%;
+        height: auto; 
+    } 
+
+    .stat-input, .additional-stats .attribute input, .saving-throw input, .skill input {
+        font-size: 4em; 
+        width: 90%;
+        height: 90%; 
+    }
+
+    .modifier-input { 
+        margin: 5%;
+        border-radius: 50%;
+        font-size: 1.5em; 
+        width: 20%;
+        height: 35%;
+        align-self: flex-end;
+        justify-self: flex-end;
+    }
+
+    .saving-throw, .skill {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; 
+    }
+
+    .saving-throw label, .skill label {
+        font-size: 1.5em;  
+        text-align: center;
+    }
+
+    .saving-throw input, .skill input {
+        font-size: 1.5em; 
+        width: 80%;  
+    }
+
+    .saving-throw .proficiency-checkbox, .skill .proficiency-checkbox {
+        transform: scale(1.2);  
+    }
+
+    
     nav {
-        flex-direction: column; 
+        flex-direction: column;  
         align-items: center;
     }
+
     nav a {
-        font-size: 1em; 
-        margin: 5px 0; 
-        
+        font-size: 1.5em; 
+        margin: 5px 0;  
+}
+}
+
+ 
+@media (max-width: 480px) {
+    .character-sheet {
+        padding: 5px;
+    }
+
+    .info-box, .stats div, .additional-stats .attribute, .skills-container, .saving-throws-container {
+        max-width: 250px;  
+    }
+
+    .info-box input {
+        font-size: 1.5em;
+    }
+    
+    .stat-input, .additional-stats .attribute input, .saving-throw input, .skill input {
+        font-size: 4em;  
+    }
+    .modifier-input{
+        font-size: 1.5em; 
+        margin: 2%;
+    }
+
+    .saving-throw label, .skill label {
+        font-size: 1.5em;  
+    }
+    
+    .skill {
+        padding: 5%;
+    }
+
+    .saving-throw input, .skill input {
+        font-size: 1.5em;  
+    }
+
+    .saving-throw .proficiency-checkbox, .skill .proficiency-checkbox {
+        transform: scale(1);  
     }
 }
