@@ -779,6 +779,8 @@ main {
 }
 
 
+/* main page media queries */
+
 
 
 @media (max-width: 1500px) {
@@ -863,9 +865,9 @@ main {
     }
 
     .character-sheet {
-        width: 100%; 
-        padding: 10px;
-        padding-bottom: 5%;
+        width: 100%;  
+        padding: 10px;  
+        margin-bottom: 5%;
     }
 
     .character-info, .stats, .additional-stats, .passive-inspiration-proficiency, .skills-container, .saving-throws-container {
@@ -977,5 +979,78 @@ main {
 
     .saving-throw .proficiency-checkbox, .skill .proficiency-checkbox {
         transform: scale(1);  
+    }
+}
+
+/* Dice roller media queries */
+
+@media (max-width: 950px) {
+    .character-sheet-2 {
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 5%;
+    }
+
+    .dice-images {
+        /* flex-direction: column;  */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .dice-images img {
+        width: 200px;
+    }
+
+    .popover-content {
+        gap: 15px; 
+        padding: 15px;
+    }
+
+    .popover-content label {
+        font-size: 1.2em; 
+    }
+
+    .popover-content input {
+        width: 70%; 
+        font-size: 1em;
+    }
+
+    .popover-content .roll-result {
+        font-size: 6em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .character-sheet-2 {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 5%;
+    }
+    .dice-images {
+        flex-direction: column; 
+        align-items: center;
+        gap: 30px; 
+    }
+
+    .dice-images img {
+        width: 150px; 
+    }
+
+    .popover-content {
+        gap: 10px; 
+        padding: 10px;
+    }
+
+    .popover-content label {
+        font-size: 1em; 
+    }
+
+    .popover-content input {
+        width: 90%; 
+        font-size: 0.9em; 
+    }
+
+    .popover-content .roll-result {
+        font-size: 6em; 
     }
 }
