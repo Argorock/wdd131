@@ -938,7 +938,11 @@ main {
     nav a {
         font-size: 1.5em; 
         margin: 5px 0;  
-}
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
  
