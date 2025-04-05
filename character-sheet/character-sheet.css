@@ -1105,52 +1105,52 @@ main {
 /* Ai css for the save and load buttons */
 
 /* General button styles */
-button {
-    background: linear-gradient(to bottom, #e0c3a3, #c8a97e, #b08b5e); /* Parchment-like gradient */
-    color: #4b3e2a; /* Dark brown text */
-    border: 2px solid #8b6f47; /* Dark border for contrast */
-    border-radius: 8px; /* Rounded corners */
-    padding: 10px 20px; /* Add padding for spacing */
-    font-family: 'Georgia', serif; /* Classic serif font */
-    font-size: 1.2em; /* Adjust font size */
-    font-weight: bold; /* Make text bold */
-    cursor: pointer; /* Pointer cursor on hover */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; /* Smooth hover effects */
+/* .save-load {
+    background: linear-gradient(to bottom, #e0c3a3, #c8a97e, #b08b5e);  
+    color: #4b3e2a;  
+    border: 2px solid #8b6f47;  
+    border-radius: 8px; 
+    padding: 10px 20px;  
+    font-family: 'Georgia', serif;  
+    font-size: 1.2em;  
+    font-weight: bold;  
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;  
     margin-bottom: 2%;
 }
 
-/* Hover effect */
-button:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
-    background: linear-gradient(to bottom, #c8a97e, #b08b5e, #8b6f47); /* Darker gradient on hover */
+
+.save-load:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); 
+    background: linear-gradient(to bottom, #c8a97e, #b08b5e, #8b6f47); 
 }
 
-/* Focus effect */
-button:focus {
-    outline: none; /* Remove default focus outline */
-    box-shadow: 0 0 10px #ffcc00; /* Add glowing effect */
+ 
+.save-load:focus {
+    outline: none; 
+    box-shadow: 0 0 10px #ffcc00;  
 }
+ 
 
-/* Disabled state */
-button:disabled {
-    background: #d3d3d3; /* Gray background for disabled state */
-    color: #a0a0a0; /* Light gray text */
-    border: 2px solid #a0a0a0; /* Light gray border */
-    cursor: not-allowed; /* Not-allowed cursor */
-    box-shadow: none; /* Remove shadow */
+.save-load:disabled {
+    background: #d3d3d3;  
+    color: #a0a0a0;  
+    border: 2px solid #a0a0a0; 
+    cursor: not-allowed; 
+    box-shadow: none;  
 }
 
 @media (max-width: 768px) {
     .button-container {
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center; /* Center the buttons */
-        gap: 10px; /* Reduce spacing between buttons */
-    }
+        flex-direction: column; 
+        align-items: center;
+        gap: 10px; 
+    } 
 
     button {
-        width: 90%; /* Make buttons take up most of the screen width */
-        font-size: 1em; /* Adjust font size for smaller screens */
+        width: 90%; 
+        font-size: 1em; 
     }
-}
+} */
