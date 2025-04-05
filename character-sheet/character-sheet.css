@@ -1020,7 +1020,47 @@ main {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 700px) {
+    .character-sheet-2 {
+        width: 85%; /* Slightly reduce the width */
+        padding: 10px;
+        margin-bottom: 5%;
+    }
+
+    .dice-images {
+        flex-direction: column; /* Stack dice images vertically */
+        align-items: center;
+        gap: 20px; /* Adjust spacing between dice images */
+    }
+
+    .dice-images img {
+        width: 180px; /* Reduce dice image size */
+    }
+
+    .popover-content {
+        gap: 12px; /* Adjust spacing between elements */
+        padding: 12px;
+    }
+
+    .popover-content label {
+        font-size: 1.1em; /* Slightly reduce font size for labels */
+    }
+
+    .popover-content input {
+        width: 80%; /* Adjust input width */
+        font-size: 0.95em; /* Slightly reduce font size */
+    }
+
+    .popover-content .roll-result {
+        font-size: 5em; /* Reduce font size for results */
+    }
+
+    #dice-popover-img {
+        width: 250px; /* Adjust dice popover image size */
+    }
+}
+
+@media (max-width: 450px) {
     .character-sheet-2 {
         width: 90%;
         padding: 10px;
@@ -1052,5 +1092,8 @@ main {
 
     .popover-content .roll-result {
         font-size: 6em; 
+    }
+    #dice-popover-img {
+        width: 250px; 
     }
 }
