@@ -1,3 +1,85 @@
+// the local storage save function was done by ai, because i wanted to implement it, but i didn't really want it
+// to be part of the assignment, but i thought you'd still probably enjoy it.
+
+function saveCharacterSheetToLocal() {
+    const characterData = {
+        name: document.getElementById('character-name').value,
+        classLevel: document.getElementById('class-level').value,
+        background: document.getElementById('background').value,
+        race: document.getElementById('race').value,
+        alignment: document.getElementById('alignment').value,
+        experiencePoints: document.getElementById('experience-points').value,
+        stats: Array.from(document.querySelectorAll('.stat-input')).map(input => input.value),
+        modifiers: Array.from(document.querySelectorAll('.modifier-input')).map(input => input.value),
+        skills: Array.from(document.querySelectorAll('.skill-input')).map(input => input.value),
+        savingThrows: Array.from(document.querySelectorAll('.saving-throw-input')).map(input => input.value),
+    };
+
+    localStorage.setItem('characterSheet', JSON.stringify(characterData));
+    alert('Character sheet saved to Local Storage!');
+}
+
+function loadCharacterSheetFromLocal() {
+    const characterData = JSON.parse(localStorage.getItem('characterSheet'));
+    if (!characterData) {
+        alert('No saved character sheet found in Local Storage!');
+        return;
+    }
+
+    // Populate the inputs with saved data
+    document.getElementById('character-name').value = characterData.name;
+    document.getElementById('class-level').value = characterData.classLevel;
+    document.getElementById('background').value = characterData.background;
+    document.getElementById('race').value = characterData.race;
+    document.getElementById('alignment').value = characterData.alignment;
+    document.getElementById('experience-points').value = characterData.experiencePoints;
+
+    const statInputs = document.querySelectorAll('.stat-input');
+    characterData.stats.forEach((value, index) => {
+        statInputs[index].value = value;
+    });
+
+    const modifierInputs = document.querySelectorAll('.modifier-input');
+    characterData.modifiers.forEach((value, index) => {
+        modifierInputs[index].value = value;
+    });
+
+    const skillInputs = document.querySelectorAll('.skill-input');
+    characterData.skills.forEach((value, index) => {
+        skillInputs[index].value = value;
+    });
+
+    const savingThrowInputs = document.querySelectorAll('.saving-throw-input');
+    characterData.savingThrows.forEach((value, index) => {
+        savingThrowInputs[index].value = value;
+    });
+
+    // Recalculate modifiers based on loaded stats
+    statInputs.forEach((statInput, index) => {
+        const statValue = parseInt(statInput.value) || 0;
+        const modifierValue = Math.floor((statValue - 10) / 2);
+        modifierInputs[index].value = modifierValue;
+    });
+
+    // Call update functions to refresh calculated values
+    calculateProficiencyBonus(); // Update proficiency bonus
+    updateSavingThrows(); // Update saving throws
+    updateSkills(); // Update skills
+    updatePassivePerception(); // Update passive perception
+
+    alert('Character sheet loaded from Local Storage!');
+}
+
+
+document.getElementById('save-character-sheet').addEventListener('click', saveCharacterSheetToLocal);
+document.getElementById('load-character-sheet').addEventListener('click', loadCharacterSheetFromLocal);
+
+
+// End of pure AI generated code, the rest is pretty much mine, with ai recommendations and help
+
+
+
+
 // switching the image src when hovering over the image
 document.querySelectorAll('.dice-button').forEach(button => {
     const img = button.querySelector('img');
